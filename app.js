@@ -68,9 +68,9 @@ function onQueueReady(exchange) {
  * declare the route
  */
 app.post('/push', function(req, res) {
-  var myName = req.body.myName;
+  var myName = req.body.name;
   exchange.publish('my_queue1', {data: myName});
-  console.log("publish on RabbitMQ done..", req.body.myName);
+  console.log("publish on RabbitMQ done..", req.body.name);
   res.redirect('/');
 });
 
