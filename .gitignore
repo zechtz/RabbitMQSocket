@@ -1,3 +1,4 @@
 node_modules/
 subscriber.js
 worker.js
+server.js
