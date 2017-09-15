@@ -47,6 +47,9 @@ function exchangeSetup() {
   console.log('Exchange ' + exchange.name + ' is open');
 }
 
+/**
+ * bind que to exchange and subscribe
+ */
 function queueSetup() {
   queue.subscribe(function(message) {
     console.log("message from queue is", message);
@@ -60,21 +63,37 @@ function onQueueReady(exchange) {
   console.log('queue binding done...');
 }
 
-app.post('/test', function(req, res) {
+/**
+ *
+ * declare the route
+ */
+app.post('/push', function(req, res) {
   var myName = req.body.myName;
   exchange.publish('my_queue1', {data: myName});
   console.log("publish on RabbitMQ done..", req.body.myName);
   res.redirect('/');
 });
 
+/**
+ *
+ * start listening on the specified port
+ *
+ */
 var server = app.listen(port, function() {
   console.log('listening on port', port);
 });
 
+/**
+ *
+ * set up socketIO to listen on the port as well
+ *
+ */
 io = io.listen(server);
 
+/**
+ * emit events through socketIO
+ */
 function emitEvent(data){
-  console.log('socket emit function is running');
   io.sockets.on('connection', function (socket) {
     console.log('socket connected', socket.id);
     console.log("emitting event now from server..", data);
