@@ -96,7 +96,7 @@ io = io.listen(server);
 function emitEvent(data){
   io.sockets.on('connection', function (socket) {
     console.log('socket connected', socket.id);
-    console.log("emitting event now from server..", data);
+    console.log("emitting event now from server using socketIO..", data);
     io.sockets.emit('event1', data);
   });
 }
