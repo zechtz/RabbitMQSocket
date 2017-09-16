@@ -10,7 +10,7 @@
 <body>
 
   <script>
-    var socket = io('ws://localhost:3000');
+    var socket =  io('ws://localhost:3000');
 
     socket.on('event1', function(data){
       $('p#realTimeSearch').text(data);
