@@ -13,11 +13,14 @@
     var socket =  io('ws://localhost:3000');
 
     socket.on('event1', function(data){
-      $('p#realTimeSearch').text(data);
+      var li = document.createElement("li");
+      li.appendChild(document.createTextNode(data + ' was added'));
+      document.getElementById('list'). appendChild(li);
     })
   </script>
 
   <p id="realTimeSearch"></p>
+  <ul id="list"></ul>
   <form action="/push" method="post">
     <input id="name" type="text" name="name">
     <input type="submit" value="Push">
