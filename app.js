@@ -18,7 +18,6 @@ app.use(express.static(__dirname));
 var connection = amqp.createConnection();
 connection.on('ready', setup);
 
-
 /**
  * define an exchange
  */
