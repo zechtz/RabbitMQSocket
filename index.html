@@ -10,9 +10,8 @@
 <body>
 
   <script>
-    var socket =  io('ws://localhost:3000');
-
-    socket.on('event1', function(data){
+    var socket = io('ws://localhost:3000', {transports: ['websocket']});
+    socket.on('newData', function(data){
       var li = document.createElement("li");
       li.appendChild(document.createTextNode(data + ' was added'));
       document.getElementById('list'). appendChild(li);
@@ -21,7 +20,7 @@
 
   <p id="realTimeSearch"></p>
   <ul id="list"></ul>
-  <form action="/push" method="post">
+  <form action="/push" method="get">
     <input id="name" type="text" name="name">
     <input type="submit" value="Push">
   </form>
