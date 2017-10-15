@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1138,
+    "Company": "2005",
+    "BookID": "MAINP",
+    "JournalCode": "DJ",
+    "CurrencyCode": "TZS",
+    "TrxCtrlNum": "Actualctr1138",
+    "ApplyDate": "2017-06-30T00:00:00",
+    "Description": "Description1138",
+    "DebitAcc": null,
+    "PositiveAmount": null,
+    "DrUID": null,
+    "CreditAcc": null,
+    "CrUID": null,
+    "NegativeAmount": null,
+    "LogMessage": "{\"message\": \"Journal line transaction successfully generated in Epicor\",\"LineUID\": \"1138\",\"GLAccount\": \"074-2005-0000-000-00000000-0000-00000000-0-000-99999995\",\"Amount\": \"6000000\"}",
+    "StatusCode": 1
+  },
+  {
+    "id": 1138,
+    "Company": "2005",
+    "BookID": "MAINP",
+    "JournalCode": "DJ",
+    "CurrencyCode": "TZS",
+    "TrxCtrlNum": "Actualctr1138",
+    "ApplyDate": "2017-06-30T00:00:00",
+    "Description": "Description1138",
+    "DebitAcc": null,
+    "PositiveAmount": null,
+    "DrUID": null,
+    "CreditAcc": null,
+    "CrUID": null,
+    "NegativeAmount": null,
+    "LogMessage": "{\"message\": \"Journal line transaction successfully generated in Epicor\",\"LineUID\": \"1138\",\"GLAccount\": \"074-2005-512A-201-00000000-0000-C3801S04-1-10A-13300012\",\"Amount\": \"6000000\"}",
+    "StatusCode": 1
+  }
+]
